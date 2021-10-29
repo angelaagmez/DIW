@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/ej4.css">
+</head>
+<body>
+    <form>
+        <h4>Datos personales</h4>
+        <label for="nombre">Nombre:</label><br/>
+        <input type="text" id="nombre" name="nombre"><br/>
+        <label for="apellidos">Apellidos:</label><br/>
+        <input type="text" id="apellidos" name="apellidos"><br/>
+        <label for="dni">DNI:</label><br/>
+        <input type="text" id="dni" name="dni"><br/>
+        <label for="sexo">Sexo:</label><br/>
+        
+        <select name="sexo">
+            <option value="fem">Fem</option>
+            <option value="masc">Masc</option>
+            <option value="otro">Otros</option>
+        </select><br/><br/>
+        
+        
+        <label for="fecha"><img src="../ejercicios/img/calend.jpg"/>Fecha de nacimiento:</label>
+        <p>Dia: Mes: Año:</p>
+        <input type="date" id="fecha" name="fecha"><br/><br/>
+        
+        
+        <label for="idiomas">IDIOMAS:<br/>
+        <input type="radio" id="castellano" name="idiomas"><img src="../ejercicios/img/esp.png"/> Castellano<br/>
+        <input type="radio" id="ingles" name="idiomas"><img src="../ejercicios/img/eeuu.png"/>Ingles<br/>
+        <input type="radio" id="frances" name="idiomas"><img src="../ejercicios/img/fr.png"/>Frances<br/>
+        </label><br/>
+        
+        <h4>Sugerencias</h4>
+        <input type="text" name="sugerencia"><br/>
+        
+
+        <input type="submit" class="boton" name="boton" value="Enviar Datos">
+    </form>
+    
+    
+</body>
+</html>

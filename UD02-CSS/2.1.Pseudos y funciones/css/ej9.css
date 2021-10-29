@@ -1,0 +1,42 @@
+h1, h2{
+    font-weight: bold;
+}
+
+h2::first-letter{
+    font-size: 3em;
+}
+
+a::before{
+    content: "->";
+}
+
+abbr::after{
+    content: " (" attr(title) ") " ;
+}
+
+h2 + p::first-line{
+    text-indent: 2em;
+}
+
+li:first-child{
+    background-color: yellow;
+}
+
+li:last-child{
+    background-color: gray;
+}
+
+li:nth-child(odd){
+    border: 1px dotted pink;
+}
+
+@font-face{
+    font-family: 'Montserrat', sans-serif;
+    src: url(../font/Montserrat/Montserrat-Light.ttf) format("ttf")
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: ligth;
+    font-style: ligth; 
+}
