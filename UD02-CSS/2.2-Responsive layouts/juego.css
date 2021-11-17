@@ -1,0 +1,261 @@
+*{
+    margin: 0 auto;
+}
+.marcador{
+    display: flex;
+    height: 3rem;
+    width: 750px;
+    margin-top: 130px;
+    align-items: flex-end;
+}
+
+.jugador, .centro{
+    padding: 20px;
+    text-align: center;
+    width: fit-content;
+}
+
+.centro{
+    display: flex;
+    align-items: flex-end;
+}
+
+.jugador p{
+    background-color: rgb(59, 122, 122);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.centro p:first-child, .centro p:last-child{
+    border: 1px solid darkslategrey;
+    padding: 10px;
+    background-color: rgb(59, 122, 122);
+    border-radius: 10px;
+    width: 20px;
+    margin: 0em 1em 0em 1em;
+}
+
+.centro p{
+    border: 1px solid darkslategrey;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80px;
+    font-size: 14px;
+}
+
+
+.container{
+    background-image: url("campo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 750px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(10,auto);
+    grid-template-rows: repeat(12,auto);
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.chapa{
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 1.5rem;
+    width: 0.2rem;
+    height: 0.2rem;
+    margin: 1rem;
+    margin-top: 4rem;
+    align-items: center;
+}
+
+.equipo1{
+    background-color: cadetblue;
+}
+
+.equipo2{
+    background-color: brown;
+}
+
+.num1{
+    grid-column: 1;
+    grid-row: 6;
+    margin-left: 3rem;
+}
+
+.num2{
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.num3{
+    grid-column: 2;
+    grid-row: 8;
+}
+
+.num4{
+    grid-column: 2;
+    grid-row: 6;
+}
+
+.num5{
+    grid-column: 3;
+    grid-row: 6;
+}
+
+.num6{
+    grid-column: 5;
+    grid-row: 6;
+}
+
+.num7{
+    grid-column: 6;
+    grid-row: 3;
+}
+
+.num8{
+    grid-column: 6;
+    grid-row: 8;
+}
+
+.num9{
+    grid-column: 6;
+    grid-row: 6;
+}
+
+.num10{
+    grid-column: 8;
+    grid-row: 6;
+    margin-right: 3rem;
+}
+
+.pelota{
+    width: 40px;
+    height: 40px;
+    grid-column: 4;
+    grid-row: 6;
+    margin: 2rem;
+    margin-top: 4rem;
+    margin-left: 3rem;
+}
+
+.num5:active{
+    grid-column: 4;
+    grid-row: 6;
+}
+
+.num5:hover{
+    cursor: pointer;
+}
+
+.jugador p:hover{
+    background-color: midnightblue;
+    color: white;
+}
+
+.pelota:active{
+    grid-column: 4;
+    grid-row: 6;
+    animation: girar 5s infinite;
+}
+
+.pelota:hover{
+    cursor: pointer;
+}
+
+.num6:active{
+    grid-column: 3;
+    grid-row: 8;
+}
+
+.num6:hover{
+    cursor: pointer;
+}
+
+.num3:active{
+    grid-column: 2;
+    grid-row: 8;
+    animation: girar 5s infinite;
+}
+
+.num3:hover{
+    cursor: pointer;
+}
+
+.footer{
+    width: fit-content;
+    margin: 0 auto;
+    
+}
+
+h4{
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 20px;
+    animation: titulo 8s infinite;
+    color: brown;
+    margin-bottom: 10px;
+}
+
+@keyframes titulo {
+    0% {
+        letter-spacing: -17px;
+        opacity: 0;
+    }
+
+    50%{
+        letter-spacing: 2px;
+        opacity: 0.5;
+    }
+
+    100% {
+        letter-spacing: 4px;
+        opacity: 1;
+        transform: scale(2, 2);
+        text-shadow: 0px 0px 10px rgb(78, 120, 182);
+    }
+}
+
+.footer:hover{
+    background-color: rgb(59, 122, 122);
+}
+
+
+@keyframes girar {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(200px) rotate(1080deg);
+    }
+}
+
+
+
+@media only screen and (min-width: 619px) and (max-width: 736px){
+    .marcador, .container, .chapa, .h4, .marcador, .footer{width: 99%;}
+    
+    .container{
+        transform: rotate(90deg);
+        margin-top: 150px;
+        
+    }
+
+    .chapa{
+        width: 0.2rem;
+        height: 0.2rem;
+        margin: 1rem;
+        margin-top: 1rem;
+    }
+
+    .footer{
+        margin-top: 120px;
+        margin-left: 270px;
+    }
+
+    .pelota{
+        margin-top: 1.5rem;
+    }
+
+}

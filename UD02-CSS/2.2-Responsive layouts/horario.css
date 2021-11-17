@@ -1,0 +1,52 @@
+*{
+    margin:0 auto;
+    color:white;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    text-align: start;
+}
+
+.columnas{
+    flex-direction: column;
+    flex-basis: 12%;
+}
+
+.columnas div{
+    margin: 0.5rem;
+    padding-left: 0.3rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    height: 3rem;
+}
+
+.negro{
+    background-color: rgb(31, 29, 29);
+}
+
+div.hora p{
+    color: black;
+}
+
+.rojo{
+    background-color: red;
+}
+
+.azul{
+    background-color: rgb(56, 145, 247);
+}
+
+.amarillo{
+    background-color: rgb(243, 204, 29);
+}
+
+.gris{
+    background-color: gray;
+}
+
+#dos{
+    height: 8.5rem;
+    flex-basis: 24%;
+}
