@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    background-color: #2196F3;
+    padding: 20px;
+}
+.grid-container > div {
+    background-color: rgb(255, 81, 0);
+    color: white;
+    border: 2px solid #000;
+    padding: 20px;
+    font-size: 50px;
+    box-shadow: 0px 0px 8px #000;
+}
+
+.item1, .item8{
+    grid-column: 1 / span 3;
+    text-shadow: 4px 4px green;
+}
+
+.item2 {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+}
+
+.item4{
+    grid-column: 3;
+    grid-row: 2 / span 2;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Ejercicio 4</h1>
+
+<div class="grid-container">
+    <div class="item1">negro</div>
+    <div class="item2">Aside 1</div>
+    <div class="item3">Section</div>  
+    <div class="item4">Aside 2</div>
+    <div class="item5">Section</div>  
+    <div class="item8">Footer</div>
+</div>
+
+</body>
