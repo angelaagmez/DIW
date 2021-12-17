@@ -1,8 +1,0 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg>
-<!-- stroke="black" stroke-width="3" fill="white" -->
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg" height="250" width="250">
-<line x1="125" y1="20" x2="80" y2="190" style="stroke:rgb(0,0,0);stroke-width:7" />
-<line x1="125" y1="20" x2="170" y2="190" style="stroke:rgb(0,0,0);stroke-width:7" />
-
-</svg>
