@@ -1,0 +1,214 @@
+#container{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    grid-template-rows: repeat(3, 31%);
+    width: 90%;
+    height: 39rem;
+    grid-gap: 1rem 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+}
+#container div{
+    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    overflow: hidden;
+}
+
+.primero{
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    background-image: url(img/sad.gif);
+    background-size: 100%;
+    animation-name: moverFondo;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes moverFondo {
+    from {
+        background-position-y: 0%;
+    }
+
+    to {
+        background-position-y: 100%;
+    }
+}
+
+.segundo{
+    background-image: url(img/dance.gif);
+    background-size: contain;
+    animation: difuminar 4s infinite;
+}
+
+@keyframes difuminar {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.tercero{
+    grid-row: 1;
+    grid-column: 3 / span 2;
+    background-image: url(img/simpsons.jpg);
+    background-size: contain;
+}
+
+.tercero:hover{
+    animation-name: moverFondoDer;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moverFondoDer {
+    from {
+        background-position-x: 0%;
+    }
+
+    to {
+        background-position-x: 100%;
+    }
+}
+
+
+.cuarto{
+    grid-row: 2 / span 2;
+    grid-column: 2;
+    
+}
+
+.girar img{
+    animation: girarFondo 20s infinite;
+}
+
+@keyframes girarFondo {
+    0%{
+        transform: translateX(0px);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgb(47, 37, 180);
+        transform: translateY(290px) rotate(1080deg);
+    }
+}
+
+.quinto{
+    background-image: url(img/homer.gif);
+    background-size: 100%;
+}
+
+.quinto:hover{
+    animation: difuminar 4s infinite;
+}
+
+.sexto{
+    background-image: url(img/heat.gif);
+    background-size: 100%;
+    /* background-repeat: no-repeat; */
+}
+
+.sexto:active{
+    animation-name: cambio;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cambio {
+    from {
+        background-image: url(img/heat.gif);
+    }
+    to {
+        background-image: url(img/think.gif);
+    }
+}
+
+
+.septimo{
+    background-image: url(img/happy.gif);
+    background-size: 25%;
+    animation-name: moverFondoDer;
+    animation-duration: infinite;
+}
+
+.octavo{
+    grid-column: 3 / span 2;
+    grid-row: 3;
+    background-image: url(img/family.gif);
+    background-size: 100%;
+    background-size: contain;
+    animation: difuminar 4s infinite;
+}
+
+
+@media screen and (max-width: 475px) {
+    .primero{
+        grid-row: 1 / span 3;
+        grid-column: 1;
+    }
+
+    .tercero:hover{
+        animation-name: moverFondo;
+    }
+
+    .cuarto{
+        grid-row: 2 / span 1;
+        grid-column: 2;
+    }
+
+    @keyframes girarFondo {
+        0%{
+            transform: translateX(0px);
+        }
+    
+        50% {
+            box-shadow: 0 0 30px rgb(47, 37, 180);
+            transform: translateY(130px) rotate(1080deg);
+        }
+    }
+
+    .septimo{
+        background-size: 45%;
+    }
+}
+
+@media screen and (min-width: 475px) and (max-width: 810px) {
+    .primero{
+        grid-row: 1 / span 3;
+        grid-column: 1;
+    }
+
+    .tercero{
+        grid-row: 1;
+        grid-column: 4 ;
+    }
+
+    .tercero:hover{
+        animation-name: moverFondo;
+    }
+
+    .quinto{
+        grid-row: 1;
+        grid-column: 3;
+    }
+
+    .sexto{
+        grid-row: 2;
+        grid-column: 3;
+    }
+
+    .septimo{
+        background-size: 45%;
+        grid-row: 2 / span 1;
+        grid-column: 4;
+    }
+}
