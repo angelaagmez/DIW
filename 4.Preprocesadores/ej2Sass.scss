@@ -1,0 +1,16 @@
+$salmon: #F44336;
+$fuente: 'Open Sans', sans-serif;
+$blanco: #fff;
+$opaco: rgb(0,0,0,0.2);
+
+h1.title {
+    font: $fuente;
+    color: $salmon;
+}
+
+div.container {
+    color: $salmon;
+    background: $blanco;
+    width: 100%;
+    box-shadow: 0 2px 1px 0 $opaco;
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,GAAG,CAAA;EACC,gBAAgB,EALZ,OAAO;EAMX,MAAM,EAAE,MAAM;EACd,OAAO,EAAE,IAAI;CAQhB;;AAXD,AAKI,GALD,CAKG,EAAE,CAAA;EACA,KAAK,EATN,IAAI;CAUN;;AAPL,AAQI,GARD,CAQC,EAAE,CAAA;EACE,KAAK,EAXL,OAAO;CAYV",
+    "sources": [
+        "ejercicio-niveles.scss"
+    ],
+    "names": [],
+    "file": "ejercicio-niveles.css"
+}
