@@ -1,0 +1,189 @@
+// posicionamiento, etc
+@import "base.scss", "components.scss";
+
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+header {
+    list-style-type: none;
+    width: 100%;
+    background-color: $azul;
+    span {
+        margin-left: 65%;
+        margin-right: 5rem;
+        margin-top: -3rem;
+        // margin-bottom: 10rem;
+        text-align: center;
+    }
+    img {
+        width: 30px;
+        margin: 10px;
+        &:first-child {
+            width: 60px;
+            margin-top: -3rem;
+            margin-bottom: -0.2rem;
+            margin-left: -0.1rem;
+            height: 60px;
+            // margin-left: 6rem;
+        }
+    }
+}
+
+
+ul {
+    list-style: none;
+    background-color: rgb(43, 48, 49);
+    width: 10%;
+    margin-left: 0;
+    a {
+        text-decoration: none;
+    }
+    .accordion-menu {
+        width: 100%;
+        max-width: 350px;
+        // margin: 60px auto 20px;
+        background: $blanco;
+        border-radius: 4px;
+    }
+    .dropdownlink {
+        cursor: pointer;
+        display: block;
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+        border-bottom: 1px solid #ccc;
+        color: $blanco;
+        position: relative;
+        transition: all 0.4s ease-out;
+        i {
+            position: absolute;
+            top: 17px;
+            // left: 16px;
+        }
+        .fa-chevron-down {
+            right: 12px;
+            // left: auto;
+        }
+    }
+    .submenuItems a {
+        display: block;
+        color: $gris;
+        // padding: 12px 12px 12px 45px;
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        transition: all 0.4s ease-out;
+        &:hover {
+            background-color: $lista;
+            color: $blanco;
+        }
+    }
+}
+
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "chart_div chart_div chart_div regions_div regions_div"
+        "chart_div chart_div chart_div regions_div regions_div"
+        "calendar_basic calendar_basic calendar_basic calendar_basic calendar_basic"
+        "piechart piechart series_chart_div series_chart_div series_chart_div"
+        "chart_div2 chart_div2 chart_div2 chart_div2 chart_div2";
+    margin-left: 0rem;
+    margin-top: -34rem;
+    #chart_div {
+        grid-area: chart_div;
+        margin-left: 10rem;
+        margin-top: -2rem;
+    }
+    #regions_div {
+        grid-area: regions_div;
+        margin-left: 7rem;
+        margin-top: -2rem;
+    }
+    #chart_div2 {
+        grid-area: chart_div2;
+        margin-left: 12rem;
+        margin-top: -1rem;
+        margin-bottom: 0.4rem;
+    }
+    #piechart {
+        grid-area: piechart;
+        margin-left: 12rem;
+        margin-top: -1.5rem;
+    }
+    #series_chart_div {
+        grid-area: series_chart_div;
+        margin-left: 1.2rem;
+        margin-top: -1.5rem;
+    }
+    #calendar_basic {
+        grid-area: calendar_basic;
+        margin-top: -6rem;
+        margin-left: 16rem;
+    }
+}
+
+footer{
+    background-color: $azul;
+    color: $blanco;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 7px;
+}
+
+
+@media screen and (max-width: 800px) {
+    header {
+        margin-top: 0rem;
+        span {
+            margin-left: 22rem;
+            margin-right: 1rem;
+        }
+        img {
+            &:first-child {
+                margin-top: 0rem;
+            }
+        }
+    }
+
+    
+
+    #container {
+        #chart_div {
+            width: 20px;
+            margin-left: 4.5rem;
+        }
+        #regions_div {
+            width: 15px;
+            margin-top: 10rem;
+            margin-left: -4rem;
+        }
+        #chart_div2 {
+            margin-left: 2rem;
+        }
+        #piechart {
+            margin-top: -15rem;
+            margin-left: 4.5rem;
+        }
+        #series_chart_div {
+            margin-top: -0.5rem;
+            margin-left: -12rem;
+        }
+        #calendar_basic {
+            margin-top: -2rem;
+            margin-left: 4.5rem;
+        }
+    }
+
+    footer{
+        text-align: center;
+        padding: 5rem;
+    }
+}

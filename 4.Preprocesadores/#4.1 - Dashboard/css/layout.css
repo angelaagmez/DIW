@@ -1,0 +1,206 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+header {
+  list-style-type: none;
+  width: 100%;
+  background-color: #278579;
+}
+
+header span {
+  margin-left: 65%;
+  margin-right: 5rem;
+  margin-top: -3rem;
+  text-align: center;
+}
+
+header img {
+  width: 30px;
+  margin: 10px;
+}
+
+header img:first-child {
+  width: 60px;
+  margin-top: -3rem;
+  margin-bottom: -0.2rem;
+  margin-left: -0.1rem;
+  height: 60px;
+}
+
+ul {
+  list-style: none;
+  background-color: #2b3031;
+  width: 10%;
+  margin-left: 0;
+}
+
+ul a {
+  text-decoration: none;
+}
+
+ul .accordion-menu {
+  width: 100%;
+  max-width: 350px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+ul .dropdownlink {
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+  color: #fff;
+  position: relative;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+ul .dropdownlink i {
+  position: absolute;
+  top: 17px;
+}
+
+ul .dropdownlink .fa-chevron-down {
+  right: 12px;
+}
+
+ul .submenuItems a {
+  display: block;
+  color: #727272;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+ul .submenuItems a:hover {
+  background-color: #39dcab;
+  color: #fff;
+}
+
+#container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+      grid-template-areas: "chart_div chart_div chart_div regions_div regions_div" "chart_div chart_div chart_div regions_div regions_div" "calendar_basic calendar_basic calendar_basic calendar_basic calendar_basic" "piechart piechart series_chart_div series_chart_div series_chart_div" "chart_div2 chart_div2 chart_div2 chart_div2 chart_div2";
+  margin-left: 0rem;
+  margin-top: -34rem;
+}
+
+#container #chart_div {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: chart_div;
+  margin-left: 10rem;
+  margin-top: -2rem;
+}
+
+#container #regions_div {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: regions_div;
+  margin-left: 7rem;
+  margin-top: -2rem;
+}
+
+#container #chart_div2 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: chart_div2;
+  margin-left: 12rem;
+  margin-top: -1rem;
+  margin-bottom: 0.4rem;
+}
+
+#container #piechart {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: piechart;
+  margin-left: 12rem;
+  margin-top: -1.5rem;
+}
+
+#container #series_chart_div {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: series_chart_div;
+  margin-left: 1.2rem;
+  margin-top: -1.5rem;
+}
+
+#container #calendar_basic {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: calendar_basic;
+  margin-top: -6rem;
+  margin-left: 16rem;
+}
+
+footer {
+  background-color: #278579;
+  color: #fff;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 7px;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    margin-top: 0rem;
+  }
+  header span {
+    margin-left: 22rem;
+    margin-right: 1rem;
+  }
+  header img:first-child {
+    margin-top: 0rem;
+  }
+  #container #chart_div {
+    width: 20px;
+    margin-left: 4.5rem;
+  }
+  #container #regions_div {
+    width: 15px;
+    margin-top: 10rem;
+    margin-left: -4rem;
+  }
+  #container #chart_div2 {
+    margin-left: 2rem;
+  }
+  #container #piechart {
+    margin-top: -15rem;
+    margin-left: 4.5rem;
+  }
+  #container #series_chart_div {
+    margin-top: -0.5rem;
+    margin-left: -12rem;
+  }
+  #container #calendar_basic {
+    margin-top: -2rem;
+    margin-left: 4.5rem;
+  }
+  footer {
+    text-align: center;
+    padding: 5rem;
+  }
+}
+/*# sourceMappingURL=layout.css.map */
