@@ -1,0 +1,26 @@
+body {
+  margin: 0 auto;
+  max-width: 1024px; }
+
+.gallery {
+  display: flex;
+  background-color: #000;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch; }
+
+.gallery img {
+  width: 25%; }
+
+@media screen and (max-width: 1024px) {
+  .gallery img {
+    width: 33.33333%; } }
+
+@media screen and (max-width: 768px) {
+  .gallery img {
+    width: 50%; } }
+
+@media screen and (max-width: 480px) {
+  .gallery img {
+    width: 100%; } }

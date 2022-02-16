@@ -1,0 +1,57 @@
+////
+/// Ejercicio gallery.scss
+/// @author Angela Bonilla
+/// @since 1.0
+////
+
+$MAX_COLUMNS: 4 !default;
+$RESPONSIVE_COLUMNS: (1024px: 3, 768px: 2, 480px: 1);
+
+/// función que ajusta las columnas del grid recibiendo un parámetro 
+/// @param {Number} $n
+/// @return {Number} valor que define la distribución
+@function grid_columns($n) {
+    @if ($n > 0) {
+        @return (100%/$n);
+    }
+    @else {
+        @return $MAX_COLUMNS;
+    }
+}
+
+/// funcion de mixin que redimensiona las imagenes de la galería
+/// @param {Number} $n
+@mixin resize($n) {
+    .gallery img {
+        width: grid_columns($n);
+    }
+}
+
+/// tamaño del body
+body {
+    margin: 0 auto;
+    max-width: 1024px;
+}
+
+/// caracteristicas de la clase gallery
+.gallery {
+    display: flex;
+    background-color: #000;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+}
+
+/// usando la funcion resize
+@include resize(4);
+
+/// bucle que usa los tamaños para cambiar la resimension del elemento
+/// @param {Number} $size
+/// @param {Number} $value
+/// @param {Number} $RESPONSIVE_COLUMNS
+@each $size, $value in $RESPONSIVE_COLUMNS{
+    @media screen and (max-width: $size){
+        @include resize($value);
+    }
+}
