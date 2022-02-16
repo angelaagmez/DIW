@@ -1,0 +1,79 @@
+////
+/// Ejercicio grid.scss
+/// @author Angela Bonilla
+/// @since 1.0
+////
+
+$grid-width: 100rem;
+$vertical: 4rem;
+$horizontal: 4rem;
+
+/// caracteristicas de toda la pagina
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10pt;
+}
+
+/// caracteristicas de la clase row
+.row {
+    max-width: $grid-width;
+    margin: 0 auto;
+    &:not(:last-child) {
+        margin-bottom: $vertical;
+    }
+
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    [class^="col-"] {
+        float: left;
+        background-color: orange;
+        padding: 1rem;
+        &:not(:last-child) {
+            margin-right: $horizontal;
+        }
+    }
+
+    $anchototal: 0;
+    $anchofila: 0;
+
+/// función mixin para calcular el tamaño de cada elemento dependiendo de las caracteristicas
+/// @param {Number} $anchototal el ancho total
+/// @param {Number} $anchofila  el ancho de la fila
+/// @param {Number} $horizontal 
+    @mixin generarTam($anchototal, $anchofila) {
+		.col-#{$anchototal}-of-#{$anchofila} {
+			@if ($anchototal == 1) {
+				width: calc((100% - (#{$anchofila} - 1) * #{$horizontal}) / #{$anchofila});
+			} @else if($anchototal == 2) {
+				width: calc(
+					#{$anchototal} *
+						((100% - (#{$anchofila} - #{$anchototal} + 1) * #{$horizontal}) / #{$anchofila}) +
+						(#{$anchototal} - 1) *
+						#{$horizontal}
+				);
+			} @else if ($anchototal > 2) {
+				width: calc(
+					#{$anchototal} *
+						((100% - (#{$anchofila} - #{$anchototal} + 2) * #{$horizontal}) / #{$anchofila}) +
+						(#{$anchototal} - 1) *
+						#{$horizontal}
+				);
+			}
+		}
+	}
+
+/// usando la funcion de mixin creada anteriormente
+	@include generarTam(1, 2);
+	@include generarTam(1, 3);
+	@include generarTam(2, 3);
+	@include generarTam(1, 4);
+	@include generarTam(2, 4);
+	@include generarTam(3, 4);
+
+}
