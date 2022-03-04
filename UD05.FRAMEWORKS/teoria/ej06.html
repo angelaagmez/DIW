@@ -1,0 +1,128 @@
+<!--
+ ___________________________________________________________
+/\                                                          \  
+\_|                                                         |
+  |         _____     _           _     _ _                 |
+  |        |     |___| |_ ___ ___|_|___| |_|___ ___         |
+  |        | | | | .'|  _| -_|  _| | .'| | |- _| -_|        |
+  |        |_|_|_|__,|_| |___|_| |_|__,|_|_|___|___|        |
+  |                                                         |
+  |  _______________________________________________________|_ 
+  \_/_________________________________________________________/
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pestañas</title>
+    <meta charset="utf-8">
+    <meta name="description" content="https://materializecss.com/select.html" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+</head>
+
+<body>
+    <div class="container">
+        <h2>Formularios</h2>
+        <div class="row">
+            <div class="col s12">
+                <div class="input-field col s3">
+                    <input name="nombre" id="nombre" type="text" class="validate" data-length="10">
+                    <label for="nombre">Nombre</label>
+                </div>
+                <div class="input-field col s3 ">
+                    <input id="email" type="email" class="validate">
+                    <label for="email" data-error="email incorrecto" data-success="email correcto">Email</label>
+                </div>
+                <div class="input-field col s3">
+                    <select class="icons">
+                        <option value="" disabled selected>Escoge tipo de pago</option>
+                        <option value="1" data-icon="img/money.png">Efectivo</option>
+                        <option value="2" data-icon="img/visa.png">Visa</option>
+                        <option value="3" data-icon="img/mastercard.png">Mastercard</option>
+                        <option value="4" data-icon="img/paypal.png">Paypal</option>
+                    </select>
+                    <label>Modalidad de pago</label>
+                </div>
+                <div class="col s3">
+                    <p>Radio y check</p>
+                    <p>
+                        <label>
+                            <input name="group1" type="radio" id="test2" />
+                            <span>Radio 1</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" id="test3" checked />
+                            <span>Radio 2</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="test6" />
+                            <span>checkbox 1</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="test7" checked />
+                            <span>checkbox 2</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="col s6">
+                    <form action="#">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>Subida de ficheros</span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col s3">
+                    <form action="#">
+                        <p class="range-field">
+                            <input type="range" id="slider" min="0" max="100" />
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTERACCIÓN ELEMENTOS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Inicialización del select
+            $('select').formSelect();
+
+            // Inicialización del slider
+            $('select').material_select();
+            var slider = document.getElementById('slider');
+            noUiSlider.create(slider, {
+                start: [20, 80],
+                connect: true,
+                step: 1,
+                range: {
+                    'min': 0,
+                    'max': 100
+                },
+                format: wNumb({
+                    decimals: 0
+                })
+            });
+        });
+    </script>
+</body>
+
+</html>

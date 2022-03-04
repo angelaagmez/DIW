@@ -1,0 +1,75 @@
+<!--
+ ___________________________________________________________
+/\                                                          \  
+\_|                                                         |
+  |         _____     _           _     _ _                 |
+  |        |     |___| |_ ___ ___|_|___| |_|___ ___         |
+  |        | | | | .'|  _| -_|  _| | .'| | |- _| -_|        |
+  |        |_|_|_|__,|_| |___|_| |_|__,|_|_|___|___|        |
+  |                                                         |
+  |  _______________________________________________________|_ 
+  \_/_________________________________________________________/
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Grid adaptado a dispositivos</title>
+	<meta charset="utf-8">
+	<meta name="description" content="https://materializecss.com/grid.html  https://materializecss.com/media.html" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+	<style>
+		.materialboxed {
+			width: 100%;
+			height: 220px;
+		}
+	</style>
+</head>
+
+<body class="container">
+	<div class="row">
+		<div class="col s12">
+			<h2>LightBox</h2>
+		</div>
+
+		<!-- Adaptación a dispositivos 
+				* Mobile Devices <= 600px (prefijo s): Sección imagen a 6 columnas
+				* Any Device > 600px (prefijo m):      Sección imagen a 3 columnas
+			-->
+		<div class="col s6 m3">
+			<img class="materialboxed" src="img/steve-jobs.jpg" alt="steve-jobs">
+			<h4>Steve Jobs</h4>
+			<p>Inspiración y creatividad</p>
+		</div>
+		<div class="col s6 m3">
+			<img class="materialboxed" src="img/computer_art.png" alt="computer">
+			<h4>Arte conceptual</h4>
+			<p>Sencillo y atractivo</p>
+		</div>
+		<div class="col s6 m3">
+			<img class="materialboxed" src="img/nature_reserve.jpg" alt="nature-reserve">
+			<h4>Reserva natural</h4>
+			<p>Lugar entrañable</p>
+		</div>
+		<div class="col s6 m3">
+			<img class="materialboxed" src="img/dinner.jpg" alt="dinner">
+			<h4>Celebraciones</h4>
+			<p>Cualquier ocasión es buena</p>
+		</div>
+	</div>
+
+	<!-- INTERACCIÓN ELEMENTOS -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.materialboxed').materialbox();
+		});
+	</script>
+</body>
+
+</html>
